@@ -2,7 +2,7 @@
   {{#alert}}
     {{alertMessage}}
   {{/alert}}
-  
+ 
   {{#index}}
      {{ > person/allList }}
   {{/index}}
@@ -22,3 +22,16 @@
   
   <link rel="stylesheet" type="text/css" href="/resources/css/main.css">
 {{>/layout/footer}}
+
+<!-- 
+
+	@PostMapping(value= {"person/{id}"})
+	public void updatePerson(@PathVariable("id") long id, @ModelAttribute Person params) {
+
+//		System.out.println("person id: \n"+ id);
+		params.setId(id);
+		System.out.println(" "+ params.getEmail() +" data types \n");
+		this.personcrud.save(params);
+//		return "redirect:person/" + id;
+	}
+ -->

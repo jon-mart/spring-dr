@@ -122,7 +122,7 @@ public class PersonController {
 		return "person";
 	}
 
-	@GetMapping(value= {"/person/{id}", "/person/{id}/show"})
+	@GetMapping(value= {"/person/{id}", "person/{id}/person/{id}"})
 	public String findOne(@PathVariable("id") long id, Map<String, Object> model) {
 		if (this.personcrud.exists(id) == false) {
 			model.put("status", 404);
@@ -181,13 +181,12 @@ public class PersonController {
 		}	
 		model.put("editPerson", true);
 //		model.put("status", "fdajflka");
-		model.put("actionUrl", "show");
+		model.put("actionUrl", "person/"+id);
         model.put("personPerDetails", this.personcrud.findOne(id));
-
 		return "person";
 	}
 
-	@PostMapping(value= {"person/{id}/show"})
+	@PostMapping(value= {"person/{id}"})
 	public void updatePerson(@PathVariable("id") long id, @ModelAttribute Person params) {
 
 //		System.out.println("person id: \n"+ id);

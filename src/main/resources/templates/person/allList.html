@@ -1,6 +1,7 @@
 
 <h1 style='text-align:center'>{{message}}</h1>
 <h3  style='text-align:center'> total number of rows:{{count}}</h3>
+ <a href="/person" class="btn btn-primary">Add User</a>
 <table class='table'>
   <thead>
     <tr>
@@ -32,9 +33,9 @@
      <td>{{currentWorkingPlace}}</td>
      <td>{{degree}}</td>
      <td>{{degreeCount}}</td>
-     <td> <a href="person/{{id}}">show</a> </td>
-     <td> <a href="person/{{id}}/edit">edit</a>  </td>
-     <td> <a href="person/{{id}}/delete">delete</a>  </td>
+     <td> <a href="person/{{id}}" class="btn btn-primary">show</a> </td>
+     <td> <a href="person/{{id}}/edit" class="btn btn-warning">edit</a>  </td>
+     <td> <a href="person/{{id}}/delete" class="btn btn-danger">delete</a>  </td>
    </tr>
    {{/listOfPersons}}
   </tbody>
