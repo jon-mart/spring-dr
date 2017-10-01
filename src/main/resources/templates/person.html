@@ -1,0 +1,24 @@
+{{>/layout/header}}
+  {{#alert}}
+    {{alertMessage}}
+  {{/alert}}
+  
+  {{#index}}
+     {{ > person/allList }}
+  {{/index}}
+  
+  {{#showOne}}
+      {{ > person/showOne }}
+  {{/showOne}}
+  
+  {{#createPerson}}
+      {{ > person/createPerson }}
+  {{/createPerson}}
+  
+  {{#editPerson}}
+     {{ > person/editPerson }}
+  {{/editPerson}}
+  <!--  <img src="/resources/img/7.jpg" /> -->
+  
+  <link rel="stylesheet" type="text/css" href="/resources/css/main.css">
+{{>/layout/footer}}

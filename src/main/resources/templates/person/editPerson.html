@@ -1,0 +1,48 @@
+
+<div style="width:800px; height: 500px;margin-left:15%">
+<img src="/resources/img/{{id}}.jpg"  style="width:150px; hegith: 150px; text-align:center ; margin-left:45%" />
+<form method="post" action={{actionUrl}} enctype="multipart/form-data">
+
+{{#personPerDetails}}
+
+ <div class="form-group">
+  <label>First Name</label>
+  <input class="form-control"  name="firstName"   value="{{firstName}}" />
+ </div>
+ <div class="form-group">
+  <label>Second Name</label>
+  <input class="form-control"  name="lastName"  value="{{lastName}}" />
+  </div>
+  <div class="form-group">
+  <label>working Years</label>
+    <input class="form-control" name="workingYears" type="number"  value="{{workingYears}}" />
+  </div>
+  <div class="form-group">
+  <label>email</label>
+   <input class="form-control" name="email" type="email" readonly value="{{email}}" />
+  </div>
+  <input type="hidden" value="{{email}}" name="email1"/ >
+  <div class="form-group">
+  <label>lastgraduateYear</label>
+   <input class="form-control" name="lastgraduateYear" type="number"  value="{{lastgraduateYear}}" />
+  </div>
+  <div class="form-group">
+  <label>currentWorkingPlace</label>
+   <input class="form-control" name="currentWorkingPlace"  value="{{currentWorkingPlace}}" />
+  </div>
+  <div class="form-group">
+  <label>degree</label>
+   <input class="form-control" name="degree"  value="{{degree}}" />
+  </div>
+  <div class="form-group">
+  <label>degreeCount</label>
+   <input class="form-control" name="degreeCount" type="number"  value="{{degreeCount}}" />
+  </div>
+  <div class="form-group">
+  <label>Profile Pic</label>
+   <input  name="image" type="file" multiple />
+  </div>
+  <button type="submit"> Submit</button>
+ {{/personPerDetails}}
+</form>
+</div> 

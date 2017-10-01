@@ -1,0 +1,34 @@
+
+
+
+<table class='table'>
+  <thead>
+    <tr>
+    <td>ID</td>
+      <td>FirstName</td>
+      <td>LastName</td>
+      <td>email</td>
+      <td>workingYears</td>
+      <td>img</td>
+    </tr>
+  </thead>
+  
+  <tbody>
+   {{#onePerson}}
+   <tr>
+    <td>{{id}}</td>
+     <td>{{firstName}}</td>
+     <td>{{lastName}}</td>
+     <td>{{email}}</td>
+     <td>{{workingYears}}</td>
+     <td> 
+     
+   			<img src="/resources/img/{{id}}.jpg"  style="width:50px; hegith: 50px;" />
+ 		
+    </td>
+   </tr>
+   {{/onePerson}}
+  </tbody>
+  
+</table>
+

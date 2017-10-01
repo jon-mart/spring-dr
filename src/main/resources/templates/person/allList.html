@@ -1,0 +1,45 @@
+
+<h1 style='text-align:center'>{{message}}</h1>
+<h3  style='text-align:center'> total number of rows:{{count}}</h3>
+<table class='table'>
+  <thead>
+    <tr>
+    <td>ID</td>
+      <td>FirstName</td>
+      <td>LastName</td>
+      <td>email</td>
+      <td>workingYears</td>
+     <td>lastgraduateYear</td>
+     <td>currentWorkingPlace</td>
+     <td>degree</td>
+     <td>degreeCount</td>
+     <td></td>
+     <td></td>
+     <td></td>
+    </tr>
+  </thead>
+  
+  <tbody>
+   {{#listOfPersons}}
+   <tr>
+    <td>{{id}}</td>
+     <td>{{firstName}}</td>
+     <td>{{lastName}}</td>
+     <td>{{email}}</td>
+     <td>{{workingYears}}</td>
+
+     <td>{{lastgraduateYear}}</td>
+     <td>{{currentWorkingPlace}}</td>
+     <td>{{degree}}</td>
+     <td>{{degreeCount}}</td>
+     <td> <a href="person/{{id}}">show</a> </td>
+     <td> <a href="person/{{id}}/edit">edit</a>  </td>
+     <td> <a href="person/{{id}}/delete">delete</a>  </td>
+   </tr>
+   {{/listOfPersons}}
+  </tbody>
+  
+</table>
+
+
+
